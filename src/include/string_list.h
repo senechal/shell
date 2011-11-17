@@ -1,7 +1,7 @@
 #ifndef STRING_LIST_H
 #define STRING_LIST_H
 
-#include <mystring.h> // its own string.h
+#include "mystring.h"
 
 typedef struct list{
     String * string;

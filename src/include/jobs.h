@@ -2,7 +2,7 @@
 #define JOBS_H
 
 #include <string_list.h>
-#include <mystring.h>
+#include "mystring.h"
 #include <sys/types.h>
 #include <list.h>
 #include <sys/procfs.h>

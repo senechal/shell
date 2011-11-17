@@ -1,4 +1,4 @@
-#include <jobs.h>
+#include "jobs.h"
 
 Job new_job(String pid, String name){
     static int counter = 1;
@@ -37,22 +37,22 @@ Job get_current_job(Vector job_list){
 
 void print_job_list(Vector job_list){
     Job job;
-    // reset index
     job_list->index = 0;
     String status;
-    if(job_list->size > 0)
-        printf("JID\tPID\tName\tStatus\n");
-    while((job = job_list_next(job_list))){
-        status = get_status(job);
-        printf("%4.0d\t%s\t%s\t\t%s\n", job->jid, job->pid, job->name, get_status(job));
+    if(job_list->size > 0) {
+    	while((job = job_list_next(job_list))){
+        	status = get_status(job);
+        	printf("%s\t%s\n", get_status(job), job->name);
+	}
     }
+    else printf ("No jobs running.\n");
 }
 
 Job get_at_index(Vector job_list, int pid) {
    Job temp;
    job_list->index = 0;
    temp = vector_next(job_list);
-   while ((temp->pid != pid) && (temp->jid != pid) && (temp != NULL))
+   while (((int)temp->pid != pid) && (temp->jid != pid) && (temp != NULL))
         temp = vector_next(job_list);
    return temp;
 }

@@ -1,4 +1,4 @@
-#include <list.h>
+#include "list.h"
 
 Vector new_vector(){
     Vector vector = (Vector) malloc(sizeof(Vector));
@@ -57,7 +57,8 @@ void* get_current(Vector vector){
 void* vector_end(Vector vector){
     void* ret = NULL;
     void* tmp = NULL;
-    while(tmp = vector_next(vector)){
+    
+    while (tmp = vector_next(vector)){
         ret = tmp;
     }
     return ret;
@@ -115,6 +116,7 @@ void vector_set_end(Vector vector){
 void* vector_end(Vector vector){
     void* ret = NULL;
     void* tmp = NULL;
+
     while(tmp = vector_next(vector))
         ret = tmp;
     vector_reset(vector);

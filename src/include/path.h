@@ -1,11 +1,11 @@
 #ifndef PATH_H
 #define PATH_H
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<mystring.h>
-#include<string_list.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "mystring.h"
+#include "string_list.h"
 
 #define MAX_SIZE_IN 255
 #define ABSOLUTE 1

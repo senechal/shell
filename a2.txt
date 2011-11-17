@@ -1,6 +1,0 @@
-a2.txt
-bin
-doc
-Makefile
-src
-teste.txt

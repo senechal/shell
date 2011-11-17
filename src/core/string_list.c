@@ -1,4 +1,4 @@
-
+ 
 #include <string_list.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -23,7 +23,7 @@ int list_append(StringList *list, String element) {
     list->size++;
     return 1;
 }
-
+//Quebra uma String e cria um StringList, separando os comandos, do parser
 StringList explode(String string, char separator){
     StringList list = new_string_list();
     int i;
@@ -52,7 +52,7 @@ int list_find_char_at_last(StringList list, char element){
     }
     return -1;
 }
-
+//remove da lista strings vazias
 void trim_string_list(StringList *list, char element){
     String tmp;
     while((tmp = list_next(list))){
@@ -91,7 +91,7 @@ int list_remove_current(StringList *list){
 String list_current(StringList list){
     return list.string[list.index];
 }
-
+//retorna o proximo item de uma stringList
 String list_next(StringList * list){
     if(list->index + 1 <= list->size)
         return list->string[list->index++];

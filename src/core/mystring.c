@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
-#include <mystring.h>
+#include "mystring.h"
 
 String copy_string(char * origin){
     int i = 0;
@@ -35,7 +35,7 @@ String copy_substring(String origin, int start, int end){
     append(&destine, '\0');
     return destine;
 }
-
+// verifica se a string esta vazia
 int is_empty_string(String string){
     if(!string)
         return 0;
